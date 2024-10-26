@@ -48,7 +48,7 @@ int main() {
                 circle(frame, center, 1, Scalar(0, 0, 0), 2);
                 circle(frame, Point(630, 336), 1, Scalar(0, 0, 0), 2);
 
-                if (firstMove <= 15) {
+                if (firstMove <= 16) {
                     prevX = center.x - 630;
                     prevY = 336 - center.y;
                     ++firstMove;
