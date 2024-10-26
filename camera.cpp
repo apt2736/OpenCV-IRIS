@@ -45,9 +45,8 @@ int main()
 
         if (maxArea > 100 && maxArea < 308000) {
             circle(vid_cam, center, (int)radius, Scalar(255, 0, 0), 2);
-
-            double dist =  47.544410243201867 - 0.84427851222848216 * (radius / 1.6) + 0.0056988650152944471* pow(radius / 1.6, 2) - 0.000012907907394359109* pow(radius / 1.6, 3);
-
+            
+            double dist = 159.59665197690032 - 6.1134615435764985 * (radius) + 0.095445319642689888 * pow(radius, 2) - 0.00071963853187203511 * pow(radius, 3) + 0.0000027869812247284325 * pow(radius, 4) - 0.0000000053337689624525208 * pow(radius, 5) + 0.0000000000039905365509557071 * pow(radius, 6);
             ostringstream textStream;
             textStream << "Object Distance: " << dist << " cm";
             string text = textStream.str();
