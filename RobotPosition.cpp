@@ -48,7 +48,7 @@ int main() {
                 circle(frame, center, 1, Scalar(0, 0, 0), 2);
                 circle(frame, Point(630, 336), 1, Scalar(0, 0, 0), 2);
 
-                if (firstMove <= 6) {
+                if (firstMove <= 15) {
                     prevX = center.x - 630;
                     prevY = 336 - center.y;
                     ++firstMove;
@@ -87,14 +87,14 @@ int main() {
                 string text = textStream.str();
                 textStream2 << "Ball Position relative to robot: [" << (center.x - 630) * 10 << " cm][" << (336 - center.y) * 10 << " cm]";
                 string text2 = textStream2.str();
-                textStream3 << "[982 cm, 456 cm]";
+                textStream3 << "[3195 cm, 1925 cm]";
                 string text3 = textStream3.str();
                 textStream4 << "Robot Velocity: " << v << " cm/s";
                 string text4 = textStream4.str();
 
                 putText(frame, text, Point(50, 50), FONT_HERSHEY_COMPLEX, 0.5, Scalar(0, 0, 255), 1.7);
                 putText(frame, text2, Point(50, 80), FONT_HERSHEY_COMPLEX, 0.5, Scalar(0, 0, 255), 1.7);
-                putText(frame, text3, center, FONT_HERSHEY_COMPLEX, 0.3, Scalar(255, 255, 255), 1.5);
+                putText(frame, text3, center, FONT_HERSHEY_COMPLEX, 0.4, Scalar(255, 255, 255), 1.5);
                 putText(frame, text4, Point(50, 110), FONT_HERSHEY_COMPLEX, 0.5, Scalar(255, 0, 255), 1.7);
             }
 
